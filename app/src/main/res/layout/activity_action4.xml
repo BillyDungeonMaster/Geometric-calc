@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActionTriangle"
+    android:background="#47A891"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,13 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Решение треугольника"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/point_x1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:hint="x1"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -30,7 +35,9 @@
             android:id="@+id/point_y1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:hint="y1"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -38,7 +45,9 @@
             android:id="@+id/point_x2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:hint="x2"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/point_x1" />
 
@@ -46,7 +55,9 @@
             android:id="@+id/point_y2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:hint="y2"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/point_y1" />
 
@@ -54,7 +65,9 @@
             android:id="@+id/point_x3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:hint="x3"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/point_x2" />
 
@@ -62,7 +75,9 @@
             android:id="@+id/point_y"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:hint="y3"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/point_y2" />
 
@@ -72,13 +87,18 @@
             android:layout_height="wrap_content"
             android:onClick="triangleOnClick"
             android:text="Найти"
-            app:layout_constraintTop_toBottomOf="@+id/point_y" />
+            app:layout_constraintTop_toBottomOf="@+id/point_y"
+            android:backgroundTint="@color/green_200"
+            android:textSize="25dp"/>
 
         <TextView
             android:id="@+id/TriangleSide1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="сторона1"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/triangle" />
 
@@ -86,7 +106,10 @@
             android:id="@+id/TriangleSide3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:text="сторона3"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/triangle" />
 
@@ -97,14 +120,21 @@
             android:text="сторона2"
             app:layout_constraintEnd_toStartOf="@+id/TriangleSide3"
             app:layout_constraintStart_toEndOf="@+id/TriangleSide1"
-            app:layout_constraintTop_toBottomOf="@+id/triangle" />
+            app:layout_constraintTop_toBottomOf="@+id/triangle"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/TriangleAng1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="угол1"
-            app:layout_constraintTop_toBottomOf="@+id/TriangleSide1" />
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TriangleSide1"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/TriangleAng2"
@@ -113,13 +143,18 @@
             android:text="угол2"
             app:layout_constraintEnd_toStartOf="@+id/TriangleAng3"
             app:layout_constraintStart_toEndOf="@+id/TriangleAng1"
-            app:layout_constraintTop_toBottomOf="@+id/TriangleSide2" />
+            app:layout_constraintTop_toBottomOf="@+id/TriangleSide2"
+            android:textSize="25dp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/TriangleAng3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:text="угол3"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TriangleSide3" />
 
