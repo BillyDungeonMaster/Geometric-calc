@@ -5,25 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#47A891">
 
-    <Button
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonTriangle"
-        android:text="Треугольник"
-        android:onClick="onTriangleClick"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonVec"
-        android:text="вектор"
-        android:onClick="onVectorClick"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonLine"
-        android:text="Прямая"
-        android:onClick="toLine"/>
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/buttonVec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green_200"
+            android:onClick="onVectorClick"
+            android:text="Операции с векторами"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonLine" />
+
+        <Button
+            android:id="@+id/buttonTriangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/green_200"
+            android:onClick="onTriangleClick"
+            android:text="Решение Треугольника"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLine" />
+
+        <Button
+            android:id="@+id/buttonLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green_200"
+            android:onClick="toLine"
+            android:text="Задачи с прямой"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
