@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActionVec"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Операции с векторами"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/point_x1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="x1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/point_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/point_y1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="y1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/point_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="y"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/point_x2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="x2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/point_x1" />
+
+        <EditText
+            android:id="@+id/point_y2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="y2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/point_y1" />
+
+        <Button
+            android:id="@+id/vectorPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            app:layout_constraintTop_toBottomOf="@+id/point_x2"
+            tools:ignore="MissingConstraints"
+            android:onClick="vectorPlus"/>
+
+        <Button
+            android:id="@+id/vectorMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/point_y2"
+            android:onClick="vectorMinus"/>
+
+        <Button
+            android:id="@+id/scalarProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="136dp"
+            android:text="Скалярное произведение"
+            app:layout_constraintEnd_toStartOf="@+id/vectorMinus"
+            app:layout_constraintStart_toEndOf="@+id/vectorPlus"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:onClick="scalarProduct"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ответ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scalarProduct" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Коллинеарность"
+            app:layout_constraintBottom_toTopOf="@+id/scalarProduct"
+            app:layout_constraintEnd_toStartOf="@+id/vectorMinus"
+            app:layout_constraintStart_toEndOf="@+id/vectorPlus"
+            android:onClick="isCollinear"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Результат скалярного произведения"
+            app:layout_constraintEnd_toStartOf="@+id/point_y"
+            app:layout_constraintStart_toEndOf="@+id/point_x"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
