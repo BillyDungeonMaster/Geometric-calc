@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActionVec"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#47A891">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,6 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Операции с векторами"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +27,9 @@
             android:id="@+id/point_x1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:hint="x1"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -32,7 +37,9 @@
             android:id="@+id/point_x"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:hint="x"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -40,7 +47,9 @@
             android:id="@+id/point_y1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:hint="y1"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -48,7 +57,9 @@
             android:id="@+id/point_y"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:hint="y"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -56,7 +67,9 @@
             android:id="@+id/point_x2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:hint="x2"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/point_x1" />
 
@@ -64,7 +77,9 @@
             android:id="@+id/point_y2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:hint="y2"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/point_y1" />
 
@@ -72,30 +87,38 @@
             android:id="@+id/vectorPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/green_200"
+            android:onClick="vectorPlus"
             android:text="+"
-            app:layout_constraintTop_toBottomOf="@+id/point_x2"
-            tools:ignore="MissingConstraints"
-            android:onClick="vectorPlus"/>
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scalarProduct"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/vectorMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/green_200"
+            android:onClick="vectorMinus"
             android:text="-"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/point_y2"
-            android:onClick="vectorMinus"/>
+            app:layout_constraintTop_toBottomOf="@+id/scalarProduct" />
 
         <Button
             android:id="@+id/scalarProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="136dp"
+            android:backgroundTint="@color/green_200"
+            android:onClick="scalarProduct"
             android:text="Скалярное произведение"
-            app:layout_constraintEnd_toStartOf="@+id/vectorMinus"
-            app:layout_constraintStart_toEndOf="@+id/vectorPlus"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            android:onClick="scalarProduct"/>
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
 
         <TextView
             android:id="@+id/textView3"
@@ -103,28 +126,35 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="ответ"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scalarProduct" />
+            app:layout_constraintTop_toBottomOf="@+id/vectorPlus" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/green_200"
+            android:onClick="isCollinear"
             android:text="Коллинеарность"
-            app:layout_constraintBottom_toTopOf="@+id/scalarProduct"
-            app:layout_constraintEnd_toStartOf="@+id/vectorMinus"
-            app:layout_constraintStart_toEndOf="@+id/vectorPlus"
-            android:onClick="isCollinear"/>
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/point_y2" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Результат скалярного произведения"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_constraintEnd_toStartOf="@+id/point_y"
             app:layout_constraintStart_toEndOf="@+id/point_x"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/point_y" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
